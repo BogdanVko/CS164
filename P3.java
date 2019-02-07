@@ -19,10 +19,10 @@ public class P3 {
         String operator = "";
         String returnString = "";
         Scanner scan = new Scanner(expression);
-        if (scan.nextDouble() == double){
+      //  if (scan.nextDouble() == double){
 
 
-        }
+        //}
 
         // Create Scanner object to parse expression
 
