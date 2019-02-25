@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class R7 {
+public class R7Lab {
 
     public static void main(String[] args) {
 
