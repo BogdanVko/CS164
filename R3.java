@@ -39,8 +39,7 @@ public class R3 {
 		System.out.println("5577 + 1234 = " + s0 + s1);
 		System.out.printf("5577 + 1234 = %d\n", s0 + s1);
 		System.out.printf("0.00001 + 83475.29837 = %.2f\n", d0 + d1);
-
-		System.out.printf("0.00001 + 83475.29837 = %.5f\n lol kek   ", d0 + d1);
+		System.out.printf("0.00001 + 83475.29837 = %.5f\n", d0 + d1);
 		
 		
 	}

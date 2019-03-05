@@ -7,6 +7,6 @@ public class LabOne {
     public static void main(String[] args )
     {
         System.out.print("Hello world");
-        System.out.println("foobar");
+        System.out.println("foobarm Git Hub");
     }
 }
