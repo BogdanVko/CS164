@@ -1,4 +1,5 @@
-// 		   R5 Assignment
+package Labs;
+// 		   Labs.R5 Assignment
 // Author: Bogdan A Vasilchenko
 //   Date: Feb 8, 2019
 //  Class: CS164

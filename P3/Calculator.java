@@ -1,4 +1,5 @@
-// Calculator Graphics User Interface
+package P3;
+// P3.Calculator Graphics User Interface
 // Author: Chris Wilcox
 // Date:   7/20/2016
 // Class:  CS163/164
@@ -118,7 +119,7 @@ class Calculator extends JFrame {
         // Finish building the window
         this.setContentPane(content);
         this.pack();
-        this.setTitle("Simple Calculator");
+        this.setTitle("Simple P3.Calculator");
         this.setResizable(false);
         this.setLocationRelativeTo(null);
     }

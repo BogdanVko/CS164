@@ -1,4 +1,5 @@
-// P1 Assignment
+package Labs;
+// EasyAssignments.P1 Assignment
 // Author: Vasilchenko, Bogdan
 // Date:   01/25/2019
 // Class:  CS164

@@ -1,3 +1,5 @@
+package Labs;
+
 // R7 Assignment
 // Author: Bogdan A Vasilchenko
 //   Date: Feb 22, 2019

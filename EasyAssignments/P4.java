@@ -1,3 +1,5 @@
+package EasyAssignments;
+
 import java.util.Scanner;
 
 public class P4 {

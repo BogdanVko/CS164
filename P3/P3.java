@@ -1,4 +1,5 @@
-// P3 Assignment
+package P3;
+// P3.P3 Assignment
 // Author: Bogdan A. Vasilchenko
 // Date:   01/28/2019
 // Class:  CS164
@@ -36,8 +37,5 @@ public class P3 {
         return returnString;
     }
 
-    public static void main(String[] args){
 
-
-    }
 }

@@ -1,4 +1,5 @@
-// P2 Assignment
+package EasyAssignments;
+// EasyAssignments.P2 Assignment
 // Author: Vasilchenko, Bogdan
 // Date:   02/02/2019
 // Class:  CS164

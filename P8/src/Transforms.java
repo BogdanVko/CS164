@@ -1,4 +1,4 @@
-package P8.src;
+package P8.src; //TODO remove this before submitting (last)
 // P8 Assignment
 // Author: Bogdan A. Vasilchenko
 // Date:   03/05/2019

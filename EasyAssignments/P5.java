@@ -1,4 +1,5 @@
-// P5 Assignment
+package EasyAssignments;
+// EasyAssignments.P5 Assignment
 // Author: Bogdan A. Vasilchenko
 // Date:   02/24/2019
 // Class:  CS164

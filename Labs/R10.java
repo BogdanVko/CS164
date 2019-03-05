@@ -1,4 +1,6 @@
-// R10 Assignment
+package Labs;
+
+// Labs.R10 Assignment
 // Author: Bogdan A Vasilchenko
 //   Date: Mar 1, 2019
 //  Class: CS164

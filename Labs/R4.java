@@ -1,4 +1,5 @@
-// R4 Assignment
+package Labs;
+// Labs.R4 Assignment
 // Author: Bogdan A Vasilchenko
 //   Date: Feb 1, 2019
 //  Class: CS164

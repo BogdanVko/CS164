@@ -47,7 +47,7 @@ public class PictureLibrary {
         try {
             Scanner in = new Scanner(new File(path));
             String magic = in.next();
-            if (!magic.equals("P2")) {
+            if (!magic.equals("EasyAssignments.P2")) {
                 in.close();
                 throw new Exception("ERROR: cannot read .pgm file " + path);
             }
@@ -79,7 +79,7 @@ public class PictureLibrary {
         int width  = getWidth();
         try {
             PrintStream output = new PrintStream(new FileOutputStream(path));
-            output.println("P2");
+            output.println("EasyAssignments.P2");
             output.println(width + " " + height);
             output.println(MAXVAL);
             for (int row = 0; row < height; row++)

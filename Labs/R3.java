@@ -1,4 +1,5 @@
-// R3 Assignment
+package Labs;
+// Labs.R3 Assignment
 // Author: Bogdan A Vasilchenko
 // Date:   Jan 30, 2019
 // Class:  CS164
