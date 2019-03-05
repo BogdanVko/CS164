@@ -4,18 +4,24 @@
 //  Class: CS164
 //  Email: vba@cs.colostate.edu
 
+package P6.src;
+
+
 public class P6 {
 
-    // Class variables
-    public static Maze maze;
-    public static int mazeWidth;
-    public static int mazeHeight;
+
+    private static Maze maze;
+    private static int mazeWidth;
+    private static int mazeHeight;
+
 
     public static void main(String[] args) {
 
         // Create maze
         String fileName = args[0];
         System.err.println("Maze name: " + fileName);
+
+
 
         // Get dimensions
         maze = new Maze(fileName);
@@ -24,30 +30,82 @@ public class P6 {
         System.err.println("Maze width: " + mazeWidth);
         System.err.println("Maze height: " + mazeHeight);
 
-        // Add code to move around maze
-        int c = 0;
-        
-        while(c < 7) {
-        	maze.moveRight();
-        	c++;
-        }
-        int d = 0;
-        while(d < 4) {
-        	maze.moveDown();
-        	d++;
-        }
-        
-        for(int i = 0; i < 6; i++) {
-        	
-        	maze.moveLeft();
-        }
-        
-		for(int i = 0; i < 6; i++) {
-		        	
-			maze.moveUp();
-		}
-        	//maze.moveRight();
-        
-        
+        //Move
+        moveDown();
+
+
+
     }
+
+    private static void moveDown(){
+
+        for(int i = 0; i < maze.getHeight(); i ++){
+
+
+            if (maze.getRow() % 2 == 0) {
+                moveEven();
+
+
+            }else {
+                moveOdd();
+
+            }
+            maze.moveDown();
+
+        }
+
+    }
+
+    private static void crazyI(){
+
+
+        if (maze.getRow() % 2 == 0) {
+
+            maze.moveDown();
+            maze.moveRight();
+            maze.moveRight();
+            maze.moveUp();
+
+        } else {
+
+            maze.moveDown();
+            maze.moveLeft();
+            maze.moveLeft();
+            maze.moveUp();
+        }
+    }
+
+    private static void moveOdd(){
+
+        for (int j = 0; j < maze.getWidth()-1; j ++){
+            if (!maze.moveLeft()){
+
+                j++;
+                crazyI();
+
+            }
+        }
+
+    }
+
+    private static void moveEven(){
+
+        for (int j = 0; j < maze.getWidth() - 1; j++) {
+
+
+            if (!maze.moveRight()){
+
+                j++;
+                crazyI();
+
+            }
+
+
+
+        }
+
+    }
+
+
+
 }   

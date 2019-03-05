@@ -4,6 +4,10 @@
 // Class:  CS160
 // Email:  wilcox@cs.colostate.edu
 
+
+
+package P6.src;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -29,7 +33,7 @@ public class Maze implements KeyListener {
 	
 	// *** IMPORTANT: DON'T CHANGE ANYTHING IN THIS FILE ***
 	// *** EXCEPT THIS NEXT LINE                         ***
-	private final int MOVE_DELAY = 100;
+	private final int MOVE_DELAY = 10;
 	
     // Maze variables
     private char mazeData[][];
@@ -202,6 +206,7 @@ public class Maze implements KeyListener {
 
         } catch (IOException e) {
             System.err.println("Cannot read maze: " + filename);
+            System.out.println(e);
             System.exit(0);
         }
     }
@@ -236,19 +241,19 @@ public class Maze implements KeyListener {
         frame.setFocusTraversalKeysEnabled(false);
 
         // Load and scale images
-        ImageIcon icon0 = new ImageIcon("Firefly.png");
+        ImageIcon icon0 = new ImageIcon("src/P6/Firefly.png");
         Image image0 = icon0.getImage();
         firefly = image0.getScaledInstance(100, 100, Image.SCALE_DEFAULT);
 
-        ImageIcon icon1 = new ImageIcon("Mal.png");
+        ImageIcon icon1 = new ImageIcon("src/P6/Mal.png");
         Image image1 = icon1.getImage();
         mal = image1.getScaledInstance(100, 100, Image.SCALE_DEFAULT);
 
-        ImageIcon icon2 = new ImageIcon("Reavers.png");
+        ImageIcon icon2 = new ImageIcon("src/P6/Reavers.png");
         Image image2 = icon2.getImage();
         reavers = image2.getScaledInstance(100, 100, Image.SCALE_DEFAULT);
 
-        ImageIcon icon3 = new ImageIcon("Success.png");
+        ImageIcon icon3 = new ImageIcon("src/P6/Success.png");
         Image image3 = icon3.getImage();
         success = image3.getScaledInstance(100, 100, Image.SCALE_DEFAULT);
 
