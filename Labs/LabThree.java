@@ -6,10 +6,14 @@ package Labs;
 // Email:  vba@cs.colostate.edu
 
 
+import java.lang.reflect.Array;
+
 public class LabThree {
 
     public static void main(String[] args){
-
+        int[] ff = new int[8];
+        //ff.length;
+        Array
         System.out.println("text");
 
     }

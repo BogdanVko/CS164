@@ -1,9 +1,9 @@
 package Labs;
 
 /**
- * Created by av on 23/01/2019.
+ * Created by Bogdan Vasilchenko on 23/01/2019.
  */
-public class LabOne {
+public class LabOne extends Object {
 
 
     public static void main(String[] args )

@@ -50,6 +50,7 @@ public class Transforms implements ImageInterface {
 
     public Transforms(){
         //Instantiate PictureLibrary object
+       ///WTF you mean? PictureLibrary lib = new PictureLibrary();
     }
 
 
@@ -57,6 +58,8 @@ public class Transforms implements ImageInterface {
 
     @Override
     public void readImage(String inFile) {
+        //FAIL library.readPGM(inFile);
+        //FAIL lib.readPGM(inFile);
         //TODO This method should call the readPGM method in the PictureLibrary object,
         //TODO passing the input file name, then it should call the getHeight,
         //TODO getWidth, and getData methods to fill in the class instance data defined above
