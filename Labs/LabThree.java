@@ -13,8 +13,11 @@ public class LabThree {
     public static void main(String[] args){
         int[] ff = new int[8];
         //ff.length;
-        Array
+        //Array
         System.out.println("text");
+
+
+
 
     }
 }

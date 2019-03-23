@@ -1,8 +1,6 @@
 package Labs;
 
-/**
- * Created by Bogdan Vasilchenko on 23/01/2019.
- */
+
 public class LabOne extends Object {
 
 

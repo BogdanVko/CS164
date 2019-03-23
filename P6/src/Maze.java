@@ -33,7 +33,7 @@ public class Maze implements KeyListener {
 	
 	// *** IMPORTANT: DON'T CHANGE ANYTHING IN THIS FILE ***
 	// *** EXCEPT THIS NEXT LINE                         ***
-	private final int MOVE_DELAY = 10;
+	private final int MOVE_DELAY = 100;
 	
     // Maze variables
     private char mazeData[][];

@@ -22,7 +22,6 @@ public class P6 {
         System.err.println("Maze name: " + fileName);
 
 
-
         // Get dimensions
         maze = new Maze(fileName);
         mazeWidth = maze.getWidth();
@@ -34,19 +33,18 @@ public class P6 {
         moveDown();
 
 
-
     }
 
-    private static void moveDown(){
+    private static void moveDown() {
 
-        for(int i = 0; i < maze.getHeight(); i ++){
+        for (int i = 0; i < maze.getHeight(); i++) {
 
 
             if (maze.getRow() % 2 == 0) {
                 moveEven();
 
 
-            }else {
+            } else {
                 moveOdd();
 
             }
@@ -56,7 +54,7 @@ public class P6 {
 
     }
 
-    private static void crazyI(){
+    private static void crazyI() {
 
 
         if (maze.getRow() % 2 == 0) {
@@ -75,10 +73,10 @@ public class P6 {
         }
     }
 
-    private static void moveOdd(){
+    private static void moveOdd() {
 
-        for (int j = 0; j < maze.getWidth()-1; j ++){
-            if (!maze.moveLeft()){
+        for (int j = 0; j < maze.getWidth() - 1; j++) {
+            if (!maze.moveLeft()) {
 
                 j++;
                 crazyI();
@@ -88,12 +86,12 @@ public class P6 {
 
     }
 
-    private static void moveEven(){
+    private static void moveEven() {
 
         for (int j = 0; j < maze.getWidth() - 1; j++) {
 
 
-            if (!maze.moveRight()){
+            if (!maze.moveRight()) {
 
                 j++;
                 crazyI();
@@ -101,11 +99,9 @@ public class P6 {
             }
 
 
-
         }
 
     }
 
 
-
-}   
+}

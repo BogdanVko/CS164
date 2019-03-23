@@ -1,12 +1,10 @@
 package Labs.R12;
+
 // R12 Assignment
 // Author: Bogdan A. Vasilchenko
 // Date:   03/09/2019
 // Class:  CS164
 // Email:  vba@cs.colostate.edu
-
-
-
 
 public class R12 implements RecitationInterface{
 
@@ -18,6 +16,7 @@ public class R12 implements RecitationInterface{
 
     public R12(){
         //Instantiate PictureLibrary object
+        PictureLibrary lib = new PictureLibrary();
 
     }
 
@@ -32,7 +31,7 @@ public class R12 implements RecitationInterface{
 
     }
 
-    
+
 
     @Override
     public int[][] imageData() {
