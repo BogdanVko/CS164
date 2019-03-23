@@ -37,51 +37,55 @@ package P8.src; //TODO remove this before submitting (last)
  *  the usual rules for submitting Java programs.
  */
 
-import com.sun.xml.internal.bind.v2.TODO;
+//import com.sun.xml.internal.bind.v2.TODO;
 
 public class Transforms implements ImageInterface {
 
-    PictureLibrary library = new PictureLibrary();
+
+    private PictureLibrary library;
     private int imageWidth = 0;
     private int imageHeight = 0;
-    private int[][] imageData;
-
-
+    private int[][] data;
 
     public Transforms(){
         //Instantiate PictureLibrary object
-       ///WTF you mean? PictureLibrary lib = new PictureLibrary();
+        library = new PictureLibrary();
+
     }
-
-
 
 
     @Override
     public void readImage(String inFile) {
-        //FAIL library.readPGM(inFile);
-        //FAIL lib.readPGM(inFile);
-        //TODO This method should call the readPGM method in the PictureLibrary object,
-        //TODO passing the input file name, then it should call the getHeight,
-        //TODO getWidth, and getData methods to fill in the class instance data defined above
-
-        //TODO should be wrapped in try-catch
-
+        try {
+            // Calls to readPGM or writePGM and associated code here
+            library.readPGM(inFile);
+            data = library.getData();
+            imageHeight = library.getHeight();
+            imageWidth = library.getWidth();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
     public void writeImage(String outFile) {
-        //TODO method should call the setData method in the Picture object with the image data,
-        //TODO then call the writePGM method passing the output file name.
+        try {
+            library.setData(data);
+            library.writePGM(outFile);
 
-        //TODO should be wrapped in try-catch
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
+
+
 
     @Override
     public int[][] imageData() {
-
-        //TODO  returning a copy of the image array
-        return new int[0][];
+        return data;
     }
+
+
 
     @Override
     public void decode() {
