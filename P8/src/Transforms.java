@@ -89,6 +89,24 @@ public class Transforms implements ImageInterface {
 
     @Override
     public void decode() {
+
+        for (int i = 0; i < data.length; i ++){
+
+            for (int j = 0; j < data[i].length; j++){
+
+                //each pixel has had the upper four bits negated
+                int originalPixel = data[i][j];
+                int upperValue = originalPixel / 16;
+                int lowerValue = originalPixel % 16;
+                int newUpperValue = 15 - upperValue;
+                int newPixel = (newUpperValue * 16) + lowerValue;
+                data[i][j] = newPixel;
+
+
+
+            }
+        }
+
         /** Calling decode restores an image in which each pixel has had the upper four bits negated.
          * To unscramble the image, your code should negate them again. You can use bitwise operators or
          * the following algorithm: To get the upper bits, divide the pixel by 16. To get the lower bits,

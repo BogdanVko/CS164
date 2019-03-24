@@ -280,15 +280,17 @@ public class ImageProgram extends JFrame implements ActionListener
     private void resetImage() {
         if (mStudent != null) {
 
+
             // Copy the pixel values
-            int image[][] = mStudent.imageData();
+            int[][] image = mStudent.imageData();
+
             int rows = image.length;
             int cols = image[0].length;
             BufferedImage buffer = new BufferedImage(cols, rows, BufferedImage.TYPE_INT_ARGB);
 
 
             for (int row = 0; row < rows; row++) {
-                for (int col=0; col < cols; col++) {
+                for (int col = 0; col < cols; col++) {
                     int rgb = pgm2RGB[image[row][col]];
                     buffer.setRGB(col, row, rgb);
                 }
