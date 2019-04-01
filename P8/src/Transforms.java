@@ -125,38 +125,26 @@ public class Transforms implements ImageInterface {
     @Override
     public void swap() {
 
-        for (int i = 0; i < data.length; i ++){
 
-            for (int j = 0; j < data[i].length; j++){
+        for(int i = 0; i < data.length; i ++) {
+            for (int j = 0; j < data[i].length; j++) {
 
-                //each pixel has had the upper four bits negated
+
                 int originalPixel = data[i][j];
 
-                int upperbits, lowerbits, middlebits;
+                int upperTwoBits = originalPixel & (int)0b11000000;
+                int lowerTwoBits = originalPixel & (int)0b00000011;
+                int middleFourBits = originalPixel & (int)0b00111100;
+                int newPixel = (lowerTwoBits << 6) | middleFourBits | (upperTwoBits >> 6);
 
-                upperbits = originalPixel & (originalPixel >> 6);
-
-
-                //doesn't work
+                data[i][j] = newPixel;
 
 
 
 
             }
+
         }
-        /** Calling swap restores an image in which each pixel has been scrambled
-         *  by exhanging the lower 2 bits with the upper 2 bits. To do this requires
-         *  that your code do the same exchange to restore the original pixel. Don't modify
-         *  the middle four bits. By far the easiest way to do this is to use the bitwise operators.
-         *  Here's an example for your testing:
-
-         original pixel = 114 = 0b01110010
-
-
-         upper two bits of original = 0b01110010 & 0b11000000 = 0b01000000
-         middle four bits of original = 0b01110010 & 0b00111100 = 0b00110000
-         lower two bits of original = 0b01110010 & 0b00000011 = 0b00000010
-         new pixel = (lower << 6) | middle | (upper >> 6) **/
     }
 
     @Override
