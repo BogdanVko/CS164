@@ -47,10 +47,10 @@ public class PictureLibrary {
         try {
             Scanner in = new Scanner(new File(path));
             String magic = in.next();
-            if (!magic.equals("EasyAssignments.P2")) {
+           /* if (!magic.equals("EasyAssignments.P8")) {
                 in.close();
                 throw new Exception("ERROR: cannot read .pgm file " + path);
-            }
+            }*/
             width  = in.nextInt();
             height = in.nextInt();
             maxval = in.nextInt();

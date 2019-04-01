@@ -4,6 +4,7 @@ package P8.src; //TODO remove this before submitting (last)
 // Date:   03/05/2019
 // Class:  CS164
 // Email:  vba@cs.colostate.edu
+import java.util.BitSet;
 /**
  *
  * Objectives of this Assignment
@@ -123,6 +124,26 @@ public class Transforms implements ImageInterface {
 
     @Override
     public void swap() {
+
+        for (int i = 0; i < data.length; i ++){
+
+            for (int j = 0; j < data[i].length; j++){
+
+                //each pixel has had the upper four bits negated
+                int originalPixel = data[i][j];
+
+                int upperbits, lowerbits, middlebits;
+
+                upperbits = originalPixel & (originalPixel >> 6);
+
+
+                //doesn't work
+
+
+
+
+            }
+        }
         /** Calling swap restores an image in which each pixel has been scrambled
          *  by exhanging the lower 2 bits with the upper 2 bits. To do this requires
          *  that your code do the same exchange to restore the original pixel. Don't modify
@@ -130,6 +151,8 @@ public class Transforms implements ImageInterface {
          *  Here's an example for your testing:
 
          original pixel = 114 = 0b01110010
+
+
          upper two bits of original = 0b01110010 & 0b11000000 = 0b01000000
          middle four bits of original = 0b01110010 & 0b00111100 = 0b00110000
          lower two bits of original = 0b01110010 & 0b00000011 = 0b00000010
@@ -138,11 +161,19 @@ public class Transforms implements ImageInterface {
 
     @Override
     public void mirror() {
-        /** Calling mirror reverses the image top to bottom.
-         * To reverse top to bottom, exchange the first row for the last row,
-         * the second row for the second to last row, and so on until the entire image
-         * is reversed.
-         */
+
+        //int n = 0;
+
+        for (int i = 0; i < data.length / 2; i ++) {
+
+            int[] swap = data[i];
+            data[i] = data[data.length - 1 - i];
+            data[data.length - 1 - i] = swap;
+
+
+        }
+
+
     }
 
     @Override
@@ -153,5 +184,19 @@ public class Transforms implements ImageInterface {
          *  and column index 310.
          *
          */
+        for (int i = 10; i < 310; i ++) {
+
+            for (int j = 10; j < 160; j++) {
+
+                int swap = data[i][j];
+                data[i][j] = data[i][j + 300];
+                data[i][j + 300] = swap;
+
+
+            }
+
+        }
     }
+
+
 }
