@@ -1,44 +1,13 @@
-package P8.src; //TODO remove this before submitting (last)
+package P8.src;
 // P8 Assignment
 // Author: Bogdan A. Vasilchenko
 // Date:   03/05/2019
 // Class:  CS164
 // Email:  vba@cs.colostate.edu
 import java.util.BitSet;
-/**
- *
- * Objectives of this Assignment
-
-    Implement a set of methods that allow a GUI object to use your class,
-    instantiate and call a supplied class to read and write images,
-    declare and use 2D arrays to store images, and
-    manipulate the data in 2D arrays to transform images.
-
-**/
-
-/**
- *  Description
-
-    The purpose of the assignment is to write a Java class that can be called by
-    a user interface program to unscramble images in the Portable GreyMap (PGM) format.
-    To do this you need to write an object called Transform that inherits from an interface
-    and implements all methods in that interface. It also instantiates and calls methods in PictureLibrary.java,
-    and is in turn called from a graphical user interface (GUI) class called ImageProgram.java. Both
-    of these are supplied below.
- */
 
 
 
-/** Testing: The decode method can be tested with Decode.pgm.
- *  The swap method can be tested with Swap.pgm. The mirror method can be tested with Mirror.pgm.
- *  The exchange method can be tested with Exchange.pgm. In all cases, the restored image should be identical to Cam.pgm.
- *  After unscrambling an image you can write it to the disk, and compare it to Cam.pgm using the Linux diff command,
- *  thus all students can verify that their code is perfect before submission! NOTE: We may test your code with an image
- *  file that has a different size and contents than the provided test file, so do not hardcode anything. Please follow
- *  the usual rules for submitting Java programs.
- */
-
-//import com.sun.xml.internal.bind.v2.TODO;
 
 public class Transforms implements ImageInterface {
 
