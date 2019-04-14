@@ -4,9 +4,9 @@
 //  Class: CS164
 //  Email: vba@cs.colostate.edu
 
+//package P6.src;
+
 package P6.src;
-
-
 public class P6 {
 
 

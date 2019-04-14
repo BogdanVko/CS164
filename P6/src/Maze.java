@@ -6,8 +6,8 @@
 
 
 
+//package P6.src;
 package P6.src;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
