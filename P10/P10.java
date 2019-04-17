@@ -122,7 +122,7 @@ public class P10 implements Interface {
         P10 p10 = new P10();
 
         // Test readTemperatures
-        Temperature[] data = p10.readTemperatures(args[0]);
+        Temperature[] data = p10.readTemperatures("/s/bach/e/under/vba/workspace/CSU_164_git/src/P10/Temperatures.txt");
 
         // Test findMinimum
         Date start = Temperature.createDate("04-Jul-2008", "06:00");

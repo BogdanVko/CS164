@@ -28,8 +28,8 @@ public class R16{
             Scanner s2 = new Scanner(sc.nextLine());
             while (s2.hasNext()) {
                 String s = s2.next();
-                String type = s2.next().getClass().getSimpleName();
-                System.out.println(type + ": " + s); // doesn't work right
+                
+                System.out.println( ": " + s); // doesn't work right
 
             }
         }
@@ -45,6 +45,6 @@ public class R16{
 
     
     public static void main(String[] args) throws IOException {
-        readFile(args[0]);
+        readFile("src/Lab16/input.txt");
     }
 }
