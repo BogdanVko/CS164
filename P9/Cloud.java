@@ -212,6 +212,8 @@ public class Cloud {
 	/**
 	 * @param args:no args
 	 */
+
+	 
 	public static void main(String[] args) {
 
 		Cloud cloud = new Cloud();
