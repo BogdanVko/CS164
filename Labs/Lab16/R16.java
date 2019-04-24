@@ -1,4 +1,4 @@
-package Lab16;
+package Labs.Lab16;
 // R16      Assignment
 // Author : Bogdan A Vasilchenko
 // Date   : Feb 27, 2019

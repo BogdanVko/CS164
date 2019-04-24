@@ -1,4 +1,4 @@
-package Lab13_14;
+package Labs.Lab13_14;
 
 public class Species {	
 

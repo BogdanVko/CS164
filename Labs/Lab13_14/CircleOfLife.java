@@ -1,5 +1,5 @@
-package Lab13_14;
-import Lab13_14.Species;
+package Labs.Lab13_14;
+import Labs.Lab13_14.Species;
 
 public class CircleOfLife {
 

@@ -1,6 +1,4 @@
-package Lab14;
-import java.util.ArrayList;
-import java.util.List;
+package Labs.Lab14;
 
 public class Animal {
 	
