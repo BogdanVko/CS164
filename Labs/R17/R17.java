@@ -93,7 +93,7 @@ public class R17 implements IR17{
 
         System.out.println("sequence3:");
         System.out.println("Answer: " + rec.sequence3(2) + "   Expecting: 7");
-        System.out.println("Answer: " + rec.sequence3(3) + "   Expecting: 20");
+        System.out.println("Answer: " + rec.sequence3(3)+ "   Expecting: 20");
         System.out.println("Answer: " + rec.sequence3(6) + "   Expecting: 547\n");
 
     }
