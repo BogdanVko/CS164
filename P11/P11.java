@@ -57,9 +57,25 @@ public class P11 implements IP11 {
 
 
 	@Override
+	/*		Method: convertNum
+	 		Precondition: num.length > 0
+	 		Post condition: return int representation of num, (e.g num:{1,2,3} returns int: 123)
+	 */
+	private String converNumtoString(int[] num){
+		if (num.length == 0) {
+			return "";
+		}else{
+			String returnString = "";
+			returnString = Integer.toString(num[0]);
+			int n = num.length-1;
+
+			int[] newArray = new int[n];
+
+			System.arraycopy(num,1,newArray,0,n);
+		}
+	}
 	public int convertNum(int[] num) {
-		// TODO Auto-generated method stub
-		return 0;
+
 	}
 
 	@Override
