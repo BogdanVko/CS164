@@ -56,12 +56,12 @@ public class P11 implements IP11 {
 		
 
 
-	@Override
+
 	/*		Method: convertNum
 	 		Precondition: num.length > 0
 	 		Post condition: return int representation of num, (e.g num:{1,2,3} returns int: 123)
 	 */
-	private String converNumtoString(int[] num){
+	private String convertNumtoString(int[] num){
 		if (num.length == 0) {
 			return "";
 		}else{
@@ -72,10 +72,13 @@ public class P11 implements IP11 {
 			int[] newArray = new int[n];
 
 			System.arraycopy(num,1,newArray,0,n);
+			return returnString + convertNumtoString(newArray);
 		}
 	}
+	@Override
 	public int convertNum(int[] num) {
 
+		return Integer.valueOf(convertNumtoString(num));
 	}
 
 	@Override
@@ -89,6 +92,8 @@ public class P11 implements IP11 {
 		P11 rec = new P11();
 
 		rec.printPattern(3);
+		int[] array =  {1,2,3,4,5};
+		System.out.println(rec.convertNum(array));
 		//System.out.println(rec.patternStar(4));
 
 	}
