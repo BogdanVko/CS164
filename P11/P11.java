@@ -83,7 +83,14 @@ public class P11 implements IP11 {
 
 	@Override
 	public ArrayList<String> intersection(ArrayList<String> AL1, ArrayList<String> AL2) {
-		// TODO Auto-generated method stub
+		if(AL1.size() <= 0){
+			return null;
+		} else{
+			ArrayList<String> returnArray = new ArrayList<>();
+			returnArray.add("d");
+
+
+		}
 		return null;
 	}
 
@@ -94,6 +101,9 @@ public class P11 implements IP11 {
 		rec.printPattern(3);
 		int[] array =  {1,2,3,4,5};
 		System.out.println(rec.convertNum(array));
+
+
+
 		//System.out.println(rec.patternStar(4));
 
 	}
