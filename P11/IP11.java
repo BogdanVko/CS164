@@ -31,9 +31,9 @@ public interface IP11 {
 			Precondition: The elements in AL1 are unique within AL1
 			Precondition: The elements in AL2 are unique within AL2
 						(but AL1 and AL2 can contain the same elements)
-			Postcondition: return an ArrayList with elements that are in both AL1 and AL2
+			Post-condition: return an ArrayList with elements that are in both AL1 and AL2
 	 					*** in the order they occur in AL1 ***
-			Postcondition: The elements in AL1 and AL2 are unchanged.
+			Post-condition: The elements in AL1 and AL2 are unchanged.
 	 */
 	public ArrayList<String> intersection( ArrayList<String> AL1, ArrayList<String> AL2);
 

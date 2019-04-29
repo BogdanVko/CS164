@@ -1,5 +1,6 @@
 package P11;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 // P11 Assignment
@@ -81,17 +82,40 @@ public class P11 implements IP11 {
 		return Integer.valueOf(convertNumtoString(num));
 	}
 
-	@Override
-	public ArrayList<String> intersection(ArrayList<String> AL1, ArrayList<String> AL2) {
-		if(AL1.size() <= 0){
-			return null;
+
+	private  ArrayList<String> intersectionMod(ArrayList<String> AL1, ArrayList<String> AL2, ArrayList<String> returnArray){
+
+		ArrayList<String> list1 = (ArrayList<String>) AL1.clone();
+		ArrayList list2 = (ArrayList<String>) AL2.clone();
+
+		if(list1.size() <= 0){
+			return returnArray;
 		} else{
-			ArrayList<String> returnArray = new ArrayList<>();
-			returnArray.add("d");
+
+			if (list2.contains(list1.get(0))){
+				returnArray.add(list1.get(0));
+
+
+			}
+			list1.remove(0);
+			return intersectionMod(list1, list2, returnArray);
 
 
 		}
-		return null;
+
+
+
+	}
+
+
+	@Override
+	public ArrayList<String> intersection(ArrayList<String> AL1, ArrayList<String> AL2) {
+		ArrayList<String> returnArray = new ArrayList<>();
+
+		intersectionMod(AL1, AL2, returnArray);
+		return returnArray;
+
+
 	}
 
 	public static void main(String[] args){
@@ -101,7 +125,12 @@ public class P11 implements IP11 {
 		rec.printPattern(3);
 		int[] array =  {1,2,3,4,5};
 		System.out.println(rec.convertNum(array));
-
+		ArrayList<String> AL1 = new ArrayList<String>();
+		ArrayList<String> AL2 = new ArrayList<String>();
+		AL1.add("a"); AL1.add("b"); AL1.add("c");
+		AL2.add("b"); AL2.add("c"); AL2.add("d"); AL2.add("a");
+		ArrayList<String> intersect = rec.intersection(AL1,AL2);
+		System.out.println(AL1 + " intersect " + AL2 + " = " + intersect);
 
 
 		//System.out.println(rec.patternStar(4));
