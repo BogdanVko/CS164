@@ -1,4 +1,4 @@
-package P11;
+//package P11;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -32,11 +32,6 @@ public class P11 implements IP11 {
 		}
 	}
 	@Override
-	/* 		Method: printPattern
-		Precondition: n>0
-	Post condition: Print a pattern of n+1 ( 0 to n ) lines
-	Post condition: line i (i = 0 to n) has i stars ("*") followed by (n-i) stripes ("-")
-	 */
 	public void printPattern(int n) {
 		printPattern2(n, n);
 
@@ -58,10 +53,7 @@ public class P11 implements IP11 {
 
 
 
-	/*		Method: convertNum
-	 		Precondition: num.length > 0
-	 		Post condition: return int representation of num, (e.g num:{1,2,3} returns int: 123)
-	 */
+
 	private String convertNumtoString(int[] num){
 		if (num.length == 0) {
 			return "";
@@ -76,6 +68,8 @@ public class P11 implements IP11 {
 			return returnString + convertNumtoString(newArray);
 		}
 	}
+
+
 	@Override
 	public int convertNum(int[] num) {
 
@@ -83,22 +77,21 @@ public class P11 implements IP11 {
 	}
 
 
-	private  ArrayList<String> intersectionMod(ArrayList<String> AL1, ArrayList<String> AL2, ArrayList<String> returnArray){
+	private  ArrayList<String> intersectionMod(ArrayList<String> AL1, ArrayList<String> AL2, ArrayList<String> returnArray, int index){
 
-		ArrayList<String> list1 = (ArrayList<String>) AL1.clone();
-		ArrayList list2 = (ArrayList<String>) AL2.clone();
 
-		if(list1.size() <= 0){
+
+		if(index >= AL1.size()){
 			return returnArray;
 		} else{
 
-			if (list2.contains(list1.get(0))){
-				returnArray.add(list1.get(0));
+			if (AL2.contains(AL1.get(index))){
+				returnArray.add(AL1.get(index));
 
 
 			}
-			list1.remove(0);
-			return intersectionMod(list1, list2, returnArray);
+
+			return intersectionMod(AL1, AL2, returnArray, index+1);
 
 
 		}
@@ -112,7 +105,7 @@ public class P11 implements IP11 {
 	public ArrayList<String> intersection(ArrayList<String> AL1, ArrayList<String> AL2) {
 		ArrayList<String> returnArray = new ArrayList<>();
 
-		intersectionMod(AL1, AL2, returnArray);
+		intersectionMod(AL1, AL2, returnArray, 0);
 		return returnArray;
 
 
@@ -122,18 +115,16 @@ public class P11 implements IP11 {
 
 		P11 rec = new P11();
 
-		rec.printPattern(3);
-		int[] array =  {1,2,3,4,5};
-		System.out.println(rec.convertNum(array));
+		rec.printPattern(5);
+
+
 		ArrayList<String> AL1 = new ArrayList<String>();
 		ArrayList<String> AL2 = new ArrayList<String>();
-		AL1.add("a"); AL1.add("b"); AL1.add("c");
-		AL2.add("b"); AL2.add("c"); AL2.add("d"); AL2.add("a");
+		AL1.add("a"); AL1.add("b"); AL1.add("e");
+		AL2.add("b"); AL2.add("c"); AL2.add("d"); AL2.add("e");
 		ArrayList<String> intersect = rec.intersection(AL1,AL2);
 		System.out.println(AL1 + " intersect " + AL2 + " = " + intersect);
 
-
-		//System.out.println(rec.patternStar(4));
 
 	}
 
