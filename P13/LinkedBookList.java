@@ -1,4 +1,4 @@
-package P13;
+//package P13;
 
 
 
@@ -82,7 +82,9 @@ public class LinkedBookList {
             if (pos.getNext().getBook().equals(b)) {
                 pos.setNext(pos.getNext().getNext());
                 return pos.getNext().getBook();
+
             }
+
 
 
         }
@@ -94,14 +96,38 @@ public class LinkedBookList {
 	//IMPLEMENT -- removes a book at a specific index and returns it, 
 	//	or returns null if index is not present
 	public Book remove(int index){
-		
-		return null;
+        int counter = 0;
+        if (size == 0){
+            return null;
+        }
+        for (BookNode pos = head; pos != null; pos = pos.getNext()){
+
+            if (counter == index-1){
+                Book b = pos.getNext().getBook();
+                pos.setNext(pos.getNext().getNext());
+                return b;
+            }
+
+            counter++;
+
+        }
+        return null;
+
 	}
 	
 	//IMPLEMENT -- returns the total number of pages in the linked list
 	public int totalPages(){
+	    if (size == 0){
+	        return 0;
+        }
+	    int total_pages = 0;
+        for (BookNode pos = head; pos != null; pos = pos.getNext()){
+            total_pages += pos.getNumPages();
+        }
 
-		return 0;
+
+
+		return total_pages;
 	}
 	
 
