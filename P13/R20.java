@@ -27,8 +27,16 @@ public class R20 {
 		
 		System.out.println("Testing add");
 		System.out.println(lbl);
-		
+
+		Book b2 = new Book("Me", "Life of CSB", 123);
+        lbl.add(b2, 3);
+        System.out.println("\n\nTry adding my book at index 3\n \n"+ lbl);
 		scan.close();
+
+
+
+        System.out.println("\n\nTry removing my book\n \n"+ lbl);
+
 	}
 }
 
