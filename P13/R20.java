@@ -29,15 +29,15 @@ public class R20 {
 		System.out.println(lbl);
 
 		Book b2 = new Book("Me", "Life of CSB", 123);
-        lbl.add(b2, 3);
+        lbl.add(b2, 10);
         System.out.println("\n\nTry adding my book at index 3\n \n"+ lbl);
 
 
         lbl.remove(b2);
         System.out.println("\n\nTry removing my book\n \n"+ lbl);
 
-        lbl.remove(3);
-        System.out.println("\n\nTry removing a book at index 3\n \n"+ lbl);
+        lbl.remove(9);
+        System.out.println("\n\nTry removing a book at index 10\n \n"+ lbl);
 
 
         System.out.println("total pages = "+ lbl.totalPages());

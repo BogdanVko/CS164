@@ -1,4 +1,4 @@
-package P13;
+//package P13;
 
 
 
@@ -6,57 +6,7 @@ public class LinkedBookList {
 
 	private BookNode head;
 	private int size;
-	
-	public LinkedBookList(){
-		head = null;
-		size = 0;
-	}
-	
-	//returns size of the list
-	public int size(){
-		return size;
-	}
-	
-	//IMPLEMENT -- adds a book to the end of the linked list !!!
-	public void add(Book b){
-        BookNode newNode = new BookNode(b, null);
-
-	    if (this.size == 0){
-
-	        head = newNode;
-	        size++;
-            //System.out.println("added book " + b + " to list. size now is " + this.size());
-        } else {
-
-
-            for (BookNode pos = head; pos != null; pos = pos.getNext()) {
-
-                if (pos.getNext() == null) {
-                    pos.setNext(newNode);
-                    size++;
-                    break;
-                    //System.out.println("added book " + b + " to list. size now is " + this.size());
-                }
-            }
-        }
-
-
-	}
-	
-	//IMPLEMENT -- adds a book at the specific index,
-	//  or at the end if index is greater than size
-	public void add(Book b, int index){
-        BookNode newNode;
-        int counter = -1;
-		if (index > size){
-		    add(b);
-        } else{
-		    for (BookNode pos = head; pos != null; pos = pos.getNext()){
-		        counter++;
-		    if (counter == index-1){
-		        newNode = new BookNode(b, pos.getNext());
-		        pos.setNext(newNode);
-
+	
             }
 
 
@@ -84,14 +34,9 @@ public class LinkedBookList {
                 return b2;
             }
             if (pos.getNext().getBook().equals(b)) {
-                if (pos.getNext().getNext() != null) {
-                    pos.setNext(pos.getNext().getNext());
+                pos.setNext(pos.getNext().getNext());
+                return pos.getNext().getBook();
 
-                    return pos.getNext().getBook();
-                }else{
-
-                    pos.setNext(null);
-                }
             }
 
 
