@@ -1,8 +1,6 @@
 // ImageProgram.java
 // User interface for image manipulation
-// Original from Fritz Sieker
-// Modified by Chris Wilcox
-// 4/24/2013
+// Bogdan V
 package P8.src;
 import java.awt.*;
 import java.awt.event.*;
